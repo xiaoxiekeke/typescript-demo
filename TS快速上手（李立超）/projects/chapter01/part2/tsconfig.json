@@ -1,0 +1,55 @@
+{
+  /*
+    ts编译器的配置文件
+    "include"用来指定哪些ts文件需要被编译
+    路径：**表示任意目录
+        *表示任意文件
+    "exclude"：不需要被编译的文件
+    "extends":定义被继承的配置文件
+        例："extends":"./config/base"
+    "files":指定被编译的文件列表，只要文件较少时才可使用
+  */
+  "include": [
+    "./src/**/*"
+  ],
+  // "exclude": [
+  //   "./src/hello/**/*"
+  // ]
+
+  /**
+    compilerOptions包含多个子选项，用来完成对编译的配置
+  */
+  "compilerOptions": {
+    //指定被编译为的ES版本
+    "target":"ES3",
+    //指定要使用的模块化方案
+    "module":"umd",
+    //lib指定项目中要使用的库
+    "lib":["DOM","ES2015","ES2021"],
+    //指定编译后文件所在目录
+    "outDir":"./dist",
+    //将代码合并为同一个文件，只有module为amd或者system时可以使用（用的不多，一般交给打包工具去做）
+    // "outFile": "./dist/app.js"
+
+    // 是否对js进行编译，默认false
+    "allowJs": true,
+    //是否检查js代码是否符合语法规范，默认false
+    "checkJs": true,
+    //编译时是否移除注释
+    "removeComments": false,
+    // 不生成编译后的文件
+    "noEmit":false,
+    //有错误时不生成编译后的文件
+    "noEmitOnError": false,
+    //所有严格检查的总开关
+    "strict": true,
+    //编译成js的严格模式，默认为false
+    "alwaysStrict": true,
+    //不允许隐式的any类型，默认为false，当没有定义变量类型时，默认为any
+    "noImplicitAny": false,
+    //不允许不明确类型的this，设为true时，必须确定知道this是谁
+    "noImplicitThis": false,
+    //严格的检查空值
+    "strictNullChecks": false
+  }
+}

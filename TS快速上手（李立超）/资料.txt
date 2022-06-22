@@ -1,0 +1,4 @@
+https://www.youtube.com/watch?v=ExTfiyLmJPg&list=PLmOn9nNkQxJGwOhSsQ5H9JTPmiXGmy8Zw
+
+监视ts文件变化
+tsc app.ts -w
